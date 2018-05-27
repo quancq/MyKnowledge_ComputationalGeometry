@@ -1,8 +1,8 @@
-#Bài toán giao của các đoạn thẳng
+# Bài toán giao của các đoạn thẳng
 
-#(Line Segment Intersection)
+# (Line Segment Intersection)
 
-##1. Bài toán thực tế
+## 1. Bài toán thực tế
 
 Bản đồ chứa đựng nhiều thông tin quý giá cho khách du lịch. Nhưng đôi
 khi để tìm được đúng thông tin lại gặp nhiều khó khăn (VD khi biết khu
@@ -22,7 +22,7 @@ thêm layer tuyến đường để biết chi tiết về các con đường c�
 đích. ***Như vậy bài toán đặt ra là cần overlay (phủ) giữa các layer để
 hợp thành 1 bản đồ chung.***
 
-##2. Định nghĩa bài toán
+## 2. Định nghĩa bài toán
 
 
 -   Xét bài toán dạng đơn giản nhất của map overlay là mỗi bản đồ gồm 1
@@ -34,7 +34,7 @@ hợp thành 1 bản đồ chung.***
     đoạn thẳng có đầu mút nằm trên đoạn thẳng khác thì cũng tính là giao
     điểm.
 
-##3. Một số nhận xét về bài toán
+## 3. Một số nhận xét về bài toán
 
 
 Thuật toán đơn giản có thể giải bài toán như sau: với mọi cặp đoạn thẳng
@@ -65,9 +65,9 @@ giao điểm với gần nhau.
 ![Quan hệ hàng xóm theo phương Ox](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/Observation_LineSegment.png){width="6.041666666666667in"
 height="3.1938210848643918in"}
 
-##4. Thuật toán Sweepline
+## 4. Thuật toán Sweepline
 
-###4.1. Ý tưởng thuật toán
+### 4.1. Ý tưởng thuật toán
 
 Sử dung 1 đường thẳng sweep line song song Ox quét từ trên xuống. Thuật
 toán sẽ thực hiện các thao tác khi sweep line gặp một số điểm đặc biệt
@@ -95,9 +95,9 @@ cần 1 CTDL Q để lưu các event point, hỗ trợ thao tác extract\_max th
 tọa độ y, insert, delete event point. Do đó ta sẽ dùng priority queue để
 cài đặt cho Q.
 
-###4.2. Cấu trúc dữ liệu
+### 4.2. Cấu trúc dữ liệu
 
-####4.2.1. Cây nhị phân tìm kiếm cân bằng T
+#### 4.2.1. Cây nhị phân tìm kiếm cân bằng T
 
 Cây BBST T sẽ biểu diễn trạng thái hiện tại.
 
@@ -111,11 +111,11 @@ Cây BBST T sẽ biểu diễn trạng thái hiện tại.
 ![](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/BBST_LineSegment.png){width="6.072916666666667in"
 height="4.066128608923885in"}
 
-####4.2.2. Hàng đợi ưu tiên Q
+#### 4.2.2. Hàng đợi ưu tiên Q
 
 Q lưu tọa độ của 3 loại event point.
 
-###4.3. Nội dung thuật toán
+### 4.3. Nội dung thuật toán
 
 Hình sau viết chi tiết các bước của thuật toán, rất dễ hiểu, sử dụng
 sweep line là đường song song Oy.
@@ -132,7 +132,7 @@ song Ox) sẽ giải quyết được vấn đề này, nhưng khó hiểu hơn.
 
 ![](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/LineSegment_Algo_4.png){width="6.5in" height="5.309722222222222in"}
 
-###4.4. Độ phức tạp
+### 4.4. Độ phức tạp
 -----------
 
 Độ phức tạp về thời gian là O(nlogn + klogn) với k là số giao điểm. Nếu
@@ -141,13 +141,13 @@ có O(n^2) giao điểm thì thuật toán này tồi hơn thuật toán brute-f
 Độ phức tạp về bộ nhớ là O(n) (nếu xóa event của 2 đoạn thẳng không còn
 kề nhau khỏi Q).
 
-##5. Kết luận
+## 5. Kết luận
 
 Đây là bài toán giao của các đoạn thẳng. Ngoài ra còn có các dạng phức
 tạp hơn như giao của các vùng trong mặt phẳng. Bài toán này được phân
 tích trong mục 2.3 tài liệu \[1\].
 
-##6. Tài liệu tham khảo
+## 6. Tài liệu tham khảo
 
 1.   [*Computational Geometry - Algorithms and
     Applications*](http://www.cs.uu.nl/geobook/) by de Berg, Cheong, van
