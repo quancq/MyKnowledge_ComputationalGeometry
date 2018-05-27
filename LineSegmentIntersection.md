@@ -62,7 +62,7 @@ Làm thế nào để chỉ xét các đoạn thẳng gần nhau theo phương O
 thẳng mà hiện cùng giao với , và chỉ kiểm tra các cặp đoạn thẳng mà có
 giao điểm với gần nhau.
 
-![](media/image2.png){width="6.041666666666667in"
+![Quan hệ hàng xóm theo phương Ox](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/Observation_LineSegment.png){width="6.041666666666667in"
 height="3.1938210848643918in"}
 
 ##4. Thuật toán Sweepline
@@ -86,7 +86,7 @@ intersection point. Hình sau minh họa sự thay đổi danh sách khi gặp c
 sự kiện. Hình này lấy từ bài giảng \[3\], trong đó sử dụng sweep line là
 đường song song Oy, cũng tương tự với sweep line song song Ox.
 
-![](media/image3.png){width="5.958333333333333in"
+![](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/PlaneSweep_EventProcessing.png){width="5.958333333333333in"
 height="3.7392366579177603in"}
 
 Trong quá trình di chuyển sweep line, mỗi khi có 2 đoạn thẳng trở thành
@@ -108,7 +108,7 @@ Cây BBST T sẽ biểu diễn trạng thái hiện tại.
 
 -   Nút trong sẽ biểu diễn đoạn thẳng bên phải nhất của cây con trái.
 
-![](media/image4.png){width="6.072916666666667in"
+![](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/BBST_LineSegment.png){width="6.072916666666667in"
 height="4.066128608923885in"}
 
 ####4.2.2. Hàng đợi ưu tiên Q
@@ -120,23 +120,23 @@ Q lưu tọa độ của 3 loại event point.
 Hình sau viết chi tiết các bước của thuật toán, rất dễ hiểu, sử dụng
 sweep line là đường song song Oy.
 
-![](media/image5.png){width="6.5in" height="3.520138888888889in"}
+![](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/LineSegment_Algo_1.png){width="6.5in" height="3.520138888888889in"}
 
 Thuật toán trên chưa xử lý 1 số trường hợp đặc biệt như: có nhiều đoạn
 thẳng giao nhau tại cùng 1 điểm. Cách cài đặt tiếp theo (sweep line song
 song Ox) sẽ giải quyết được vấn đề này, nhưng khó hiểu hơn.
 
-![](media/image6.png){width="6.5in" height="2.577777777777778in"}
+![](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/LineSegment_Algo_2.png){width="6.5in" height="2.577777777777778in"}
 
-![](media/image7.png){width="6.5in" height="3.8125in"}
+![](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/LineSegment_Algo_3.png){width="6.5in" height="3.8125in"}
 
-![](media/image8.png){width="6.5in" height="5.309722222222222in"}
+![](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/LineSegment_Algo_4.png){width="6.5in" height="5.309722222222222in"}
 
 ###4.4. Độ phức tạp
 -----------
 
 Độ phức tạp về thời gian là O(nlogn + klogn) với k là số giao điểm. Nếu
-có O(n^2^) giao điểm thì thuật toán này tồi hơn thuật toán brute-force.
+có O(n^2) giao điểm thì thuật toán này tồi hơn thuật toán brute-force.
 
 Độ phức tạp về bộ nhớ là O(n) (nếu xóa event của 2 đoạn thẳng không còn
 kề nhau khỏi Q).
