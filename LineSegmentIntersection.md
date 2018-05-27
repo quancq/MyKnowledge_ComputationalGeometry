@@ -62,8 +62,7 @@ Làm thế nào để chỉ xét các đoạn thẳng gần nhau theo phương O
 thẳng mà hiện cùng giao với , và chỉ kiểm tra các cặp đoạn thẳng mà có
 giao điểm với gần nhau.
 
-![Quan hệ hàng xóm theo phương Ox](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/Observation_LineSegment.png){width="6.041666666666667in"
-height="3.1938210848643918in"}
+![Quan hệ hàng xóm theo phương Ox](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/Observation_LineSegment.png)
 
 ## 4. Thuật toán Sweepline
 
@@ -86,8 +85,7 @@ intersection point. Hình sau minh họa sự thay đổi danh sách khi gặp c
 sự kiện. Hình này lấy từ bài giảng \[3\], trong đó sử dụng sweep line là
 đường song song Oy, cũng tương tự với sweep line song song Ox.
 
-![](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/PlaneSweep_EventProcessing.png){width="5.958333333333333in"
-height="3.7392366579177603in"}
+![](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/PlaneSweep_EventProcessing.png)
 
 Trong quá trình di chuyển sweep line, mỗi khi có 2 đoạn thẳng trở thành
 'hàng xóm' thì ta cần phát hiện giữa chúng có giao điểm không? Do đó ta
@@ -108,8 +106,7 @@ Cây BBST T sẽ biểu diễn trạng thái hiện tại.
 
 -   Nút trong sẽ biểu diễn đoạn thẳng bên phải nhất của cây con trái.
 
-![](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/BBST_LineSegment.png){width="6.072916666666667in"
-height="4.066128608923885in"}
+![](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/BBST_LineSegment.png)
 
 #### 4.2.2. Hàng đợi ưu tiên Q
 
@@ -120,17 +117,17 @@ Q lưu tọa độ của 3 loại event point.
 Hình sau viết chi tiết các bước của thuật toán, rất dễ hiểu, sử dụng
 sweep line là đường song song Oy.
 
-![](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/LineSegment_Algo_1.png){width="6.5in" height="3.520138888888889in"}
+![](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/LineSegment_Algo_1.png)
 
 Thuật toán trên chưa xử lý 1 số trường hợp đặc biệt như: có nhiều đoạn
 thẳng giao nhau tại cùng 1 điểm. Cách cài đặt tiếp theo (sweep line song
 song Ox) sẽ giải quyết được vấn đề này, nhưng khó hiểu hơn.
 
-![](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/LineSegment_Algo_2.png){width="6.5in" height="2.577777777777778in"}
+![](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/LineSegment_Algo_2.png)
 
-![](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/LineSegment_Algo_3.png){width="6.5in" height="3.8125in"}
+![](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/LineSegment_Algo_3.png)
 
-![](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/LineSegment_Algo_4.png){width="6.5in" height="5.309722222222222in"}
+![](https://github.com/quancq/MyKnowledge_ComputationalGeometry/blob/master/Image/LineSegment_Algo_4.png)
 
 ### 4.4. Độ phức tạp
 -----------
